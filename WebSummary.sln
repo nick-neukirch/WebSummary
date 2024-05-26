@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoEngine", "InfoEngine\InfoEngine.csproj", "{8677873D-8CFC-4FE7-A278-700DCC48E24D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8677873D-8CFC-4FE7-A278-700DCC48E24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8677873D-8CFC-4FE7-A278-700DCC48E24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8677873D-8CFC-4FE7-A278-700DCC48E24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8677873D-8CFC-4FE7-A278-700DCC48E24D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
