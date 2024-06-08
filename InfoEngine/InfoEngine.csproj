@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.CustomSearchAPI.v1" Version="1.68.0.3395" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
   </ItemGroup>
 
 </Project>
