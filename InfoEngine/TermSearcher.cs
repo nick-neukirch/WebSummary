@@ -6,14 +6,17 @@ namespace WebSummary.InfoEngine;
 
 public class TermSearcher 
 {
+  public const string SearchEngineIdVariable = "WEBSUMMARY_SEARCH_ENGINE_ID";
+  public const string GoogleApiKeyVariable = "WEBSUMMARY_GOOGLE_API_KEY";
+
   private string _searchEngineId;
   private CustomSearchAPIService _searchService;
   
   
   public TermSearcher() 
   {
-    _searchEngineId = Environment.GetEnvironmentVariable("WEBSUMMARY_SEARCH_ENGINE_ID") ?? string.Empty;
-    string googleApiKey = Environment.GetEnvironmentVariable("WEBSUMMARY_GOOGLE_API_KEY") ?? string.Empty;
+    _searchEngineId = Environment.GetEnvironmentVariable(SearchEngineIdVariable) ?? string.Empty;
+    string googleApiKey = Environment.GetEnvironmentVariable(GoogleApiKeyVariable) ?? string.Empty;
 
     _searchService = new CustomSearchAPIService(new BaseClientService.Initializer()
     {
