@@ -26,7 +26,7 @@ public class TermSearcher
   }
 
 
-  public IList<Result> GetResultsForTerm(string searchTerm, int resultCount = 3)
+  public IList<Result> GetResultsForTerm(string searchTerm, int resultCount = 5)
   {
     CseResource.ListRequest? listRequest = _searchService.Cse.List();
     listRequest.Cx = _searchEngineId;

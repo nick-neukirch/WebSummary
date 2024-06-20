@@ -15,11 +15,11 @@ public class SearchTests
   {
     IDictionary environmentVariables = Environment.GetEnvironmentVariables();
 
-    if(!environmentVariables.Contains(TermSearcher.SearchEngineIdVariable)
-       || !environmentVariables.Contains(TermSearcher.GoogleApiKeyVariable))
+    Assert.Multiple(() =>
     {
-      Assert.Fail();
-    }
+      Assert.That(environmentVariables.Contains(TermSearcher.SearchEngineIdVariable), Is.True, "Search engine id missing!");
+      Assert.That(environmentVariables.Contains(TermSearcher.GoogleApiKeyVariable), Is.True, "Google API key missing!");
+    });
 
     _searcher = new TermSearcher();
   }
@@ -27,7 +27,7 @@ public class SearchTests
   [Test]
   public void SearchingForTerms()
   {
-    var catResults = _searcher.GetResultsForTerm("cat", 5);
+    var catResults = _searcher.GetResultsForTerm("cat");
     var dogResults = _searcher.GetResultsForTerm("dog", 10);
 
     Assert.Multiple(() =>
